@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Chapter7</string>
+    <string name="pause">暂停</string>
+    <string name="media_play">播放</string>
+    <string name="stop">暂停</string>
+    <string name="fullScreek">全屏</string>
+    <string name="smallScreen">小屏</string>
+</resources>
