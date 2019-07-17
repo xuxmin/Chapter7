@@ -61,6 +61,8 @@ public class IJKPlayerActivity extends Activity implements View.OnClickListener 
     RelativeLayout rl_bottom;
     boolean isPlayFinish = false;
 
+    private static String TAG = "IJKPlayerActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -284,12 +286,14 @@ public class IJKPlayerActivity extends Activity implements View.OnClickListener 
     @Override
     protected void onResume() {
         super.onResume();
+        Log.d(TAG, "onResume");
         handler.sendEmptyMessageDelayed(MSG_REFRESH, 1000);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        Log.d(TAG, "onStop");
         // 停止播放器
         if (ijkPlayer != null && ijkPlayer.isPlaying()) {
             ijkPlayer.stop();
@@ -301,6 +305,7 @@ public class IJKPlayerActivity extends Activity implements View.OnClickListener 
 
     @Override
     protected void onDestroy() {
+        Log.d(TAG, "onDestory");
         if (ijkPlayer != null) {
             ijkPlayer.stop();
             ijkPlayer.release();
@@ -335,7 +340,6 @@ public class IJKPlayerActivity extends Activity implements View.OnClickListener 
                 toggle();       // 横竖屏设置
                 break;
             case R.id.btn_play:
-
 
                 if (!isPlay) {
                     ijkPlayer.pause();

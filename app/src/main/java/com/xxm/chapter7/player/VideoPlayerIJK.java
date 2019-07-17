@@ -46,10 +46,10 @@ public class VideoPlayerIJK extends FrameLayout {
         initVideoView(context);
     }
 
-//    public VideoPlayerIJK(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-//        super(context, attrs, defStyleAttr, defStyleRes);
-//        initVideoView(context);
-//    }
+    public VideoPlayerIJK(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        initVideoView(context);
+    }
 
     private void initVideoView(Context context) {
         mContext = context;
